@@ -1,5 +1,6 @@
-import { createUser } from "./auth.models";
+import { createUser, loginUser } from "./auth.models";
 
 export const authModel = {
-  create: createUser,
+	create: createUser,
+	login: loginUser,
 };

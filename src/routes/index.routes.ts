@@ -7,5 +7,7 @@ const router: Router = Router();
 
 //routes
 router.use("/auth", authRoutes);
+//router.use('/characters');
+//router.use('/movies');
 
 export default router;

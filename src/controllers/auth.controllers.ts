@@ -22,11 +22,17 @@ export const login = async (req: Request, res: Response) => {
 	res.json(data);
 };
 
-export const register = (req: Request, res: Response) => {
+export const register = async (req: Request, res: Response) => {
 	const { email, password } = req.body;
-	res.json({
-		message: "controller register",
-		email: email,
-		password: password,
-	});
+	let data = {
+		message: "",
+	};
+
+	if (!validateString(email) || !validateString(password)) {
+		data.message = "Los campos no pueden estar vacios";
+	} else {
+		data.message = await authModel.create(email, password);
+	}
+
+	res.json(data);
 };

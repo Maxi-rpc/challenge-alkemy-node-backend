@@ -1,16 +1,15 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../index";
 
-const User = sequelize.define("user", {
-	email: {
+const Gender = sequelize.define("gender", {
+	nombre: {
 		type: DataTypes.STRING,
-		unique: true,
 		allowNull: false,
 	},
-	password: {
+	imagen: {
 		type: DataTypes.STRING,
 		allowNull: false,
 	},
 });
 
-export default User;
+export default Gender;

@@ -8,9 +8,8 @@ export default {
 	// token
 	TOKEN: process.env.TOKEN || "tokentest",
 	// database
-	DATABASE: process.env.DATABASE || "db_alkemy_nodejs",
-	//USERNAME: process.env.USERNAME || "root",
+	DATABASE: "db_alkemy_nodejs",
 	USERNAME: "root",
-	PASSWORD: process.env.PASSWORD || "",
-	HOST: process.env.HOST || "localhost",
+	PASSWORD: "",
+	HOST: "localhost",
 };

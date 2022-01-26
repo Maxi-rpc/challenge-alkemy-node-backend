@@ -1,4 +1,4 @@
-### Post Auth ok
+### Post Auth login ok
 POST http://localhost:4000/auth/login
 Content-Type: application/json
 
@@ -7,7 +7,7 @@ Content-Type: application/json
     "password": "test123"
 }
 
-### Post Auth error
+### Post Auth login error
 POST http://localhost:4000/auth/login
 Content-Type: application/json
 
@@ -16,11 +16,29 @@ Content-Type: application/json
     "password": ""
 }
 
-### Post Auth
+### Post Auth login error
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "1234"
+}
+
+### Post Auth register ok
 POST http://localhost:4000/auth/register
 Content-Type: application/json
 
 {
     "email": "test@test.com",
     "password": "test123"
+}
+
+### Post Auth register error
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": ""
 }
